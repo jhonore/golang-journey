@@ -1,0 +1,7 @@
+release/
+vendor/
+*secret*
+*.secret
+*.log
+.DS_Store
+bin/

@@ -1,0 +1,33 @@
+{
+	"empty-test": {
+		"prefix": "tc",
+		"body": [
+			"func Test_${1:pkg}__${2:name}(t *testing.T) {",
+			"    type test struct {",
+			"        name string",
+			"    }",
+			"",
+			"    var tests = []test{}",
+			"",
+			"    for _, tc := range tests {",
+			"        t.Run(tc.name, func(t *testing.T) {",
+			"        })",
+			"    }",
+			"",
+			"}",
+		],
+		"description": "Empty Test"
+	},
+	"empty-assert-test": {
+		"prefix": "tca",
+		"body": [
+			"func Test_${1:pkg}__${2:name}(t *testing.T) {",
+			"	assert := assert.New(t)",
+			"",
+			"	assert.Equal(123, 123, \"they should be equal\")",
+			"",
+			"}",
+		],
+		"description": "Test with assertions"
+	}
+}
